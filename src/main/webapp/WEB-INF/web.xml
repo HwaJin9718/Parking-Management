@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>ParkingManagement</display-name>
+  
+  <filter>
+  <filter-name>CharacterEncodingFilter</filter-name>
+  <filter-class>car.common.filter.CharacterEncodingFilter</filter-class>
+  <init-param>
+  <param-name>encoding</param-name>
+  <param-value>UTF-8</param-value>
+  </init-param>
+  </filter>
+  <filter-mapping>
+  <filter-name>CharacterEncodingFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+	<servlet-name>MemberFrontController</servlet-name>
+	<servlet-class>car.member.frontcontroller.MemberDispatcherServlet</servlet-class>	
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>MemberFrontController</servlet-name>
+	<url-pattern>*.jh</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+  <servlet-name>TicketFrontController</servlet-name>
+  <servlet-class>car.ticket.frontcontroller.TicketDispatcherServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>TicketFrontController</servlet-name>
+  <url-pattern>*.hk</url-pattern>
+</servlet-mapping> 
+
+<servlet>
+  <servlet-name>ParkingSearchDispatcherServlet</servlet-name>
+  <servlet-class>car.parkingsearch.frontcontroller.ParkingSearchDispatcherServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>ParkingSearchDispatcherServlet</servlet-name>
+  <url-pattern>*.yh</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>CalculateDispatcherServlet</servlet-name>
+  <servlet-class>car.calculate.frontcontroller.CalculateDispatcherServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>CalculateDispatcherServlet</servlet-name>
+  <url-pattern>*.ca</url-pattern>
+</servlet-mapping>
+  
+  <servlet>
+  <servlet-name>ParkingFrontController</servlet-name>
+  <servlet-class>car.parking.frontcontroller.ParkingFrontServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ParkingFrontController</servlet-name>
+  <url-pattern>*.hj</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>RecordsFrontController</servlet-name>
+  <servlet-class>car.records.frontcontroller.RecordsFrontServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RecordsFrontController</servlet-name>
+  <url-pattern>*.hw</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+ <servlet-name>NoticeFrontController</servlet-name>
+ <servlet-class>car.notice.frontcontroller.NoticeDispatcherServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>NoticeFrontController</servlet-name>
+ <url-pattern>*.so</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+		<servlet-name>PaymentFrontController</servlet-name>
+		<servlet-class>car.payment.frontcontroller.PaymentDispatcherServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PaymentFrontController</servlet-name>
+		<url-pattern>*.jn</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CouponFrontController</servlet-name>
+		<servlet-class>car.coupon.frontcontroller.CouponDispatcherServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CouponFrontController</servlet-name>
+		<url-pattern>*.jo</url-pattern>
+	</servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
